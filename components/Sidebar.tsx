@@ -38,7 +38,7 @@ const Sidebar = () => {
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a> */}
 
-        <a href="https://github.com/sukritiverma786">
+        <a href="https://github.com/sukritiverma786/My_profile.git">
           <AiFillGithub className="w-8 h-8 cursor-pointer" />
         </a>
 
