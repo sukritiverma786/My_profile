@@ -10,7 +10,7 @@ const ProjectCard: FunctionComponent<{
     category,
     Roles_And_Responsibilities,
     description,
-    github_url,
+    // github_url,
     key_techs,
   },
 }) => {
@@ -21,7 +21,7 @@ const ProjectCard: FunctionComponent<{
         <p className="my-2 text-center">{category}</p>
         <p className="my-2 text-center">{Roles_And_Responsibilities}</p>
         <p className="my-2 text-center">{description}</p>
-        <p className="my-2 text-center">{github_url}</p>
+        {/* <p className="my-2 text-center">{github_url}</p> */}
         <p className="my-2 text-center">{key_techs}</p>
       </div>
       {/* <img  src={image_path} alt={name} className='cursor-pointer' /> */}
