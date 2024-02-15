@@ -6,12 +6,12 @@ import logo from "./logoImage.jpg";
 import { useTheme } from "next-themes";
 
 const Sidebar = () => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
-  const changeTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    console.log("print settheme clicked");
-  };
+  // const changeTheme = () => {
+  //   setTheme(theme === "light" ? "dark" : "light");
+  //   console.log("print settheme clicked");
+  // };
   return (
     <div>
       <Image className="logoImg mx-auto rounded-full" src={logo} alt="image" />
@@ -20,6 +20,7 @@ const Sidebar = () => {
         <span className="text-green">SuKriti</span>{" "}
         <span className="text-white">Verma</span>
       </h3>
+
       <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200 dark:bg-black-500">
         Web Developer
       </p>
@@ -34,8 +35,8 @@ const Sidebar = () => {
 
       {/* (social icons)*/}
       <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full">
-        {/* <a href="">
-          <AiFillYoutube className="w-8 h-8 cursor-pointer" />
+        {/* <a href="https://github.com/sukritiverma786/My_profile.git">
+          <AiFillGithub className="w-8 h-8 cursor-pointer" />
         </a> */}
 
         <a href="https://github.com/sukritiverma786/My_profile.git">
@@ -97,3 +98,5 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+// git branch -m new-branch-name master
+
