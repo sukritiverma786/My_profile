@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30001587",
     "next": "11.1.2",
     "next-theme-mode": "^1.0.9",
     "next-themes": "^0.2.1",

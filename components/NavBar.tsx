@@ -27,10 +27,8 @@ const NavBar = () => {
   useEffect(() => {
     const lowercasePathname = pathname.toLowerCase();
     if (lowercasePathname === "/") setActiveItem("About");
-    if (lowercasePathname === "/projects" || lowercasePathname === "/Projects")
-      setActiveItem("Projects");
-    if (lowercasePathname === "/resume" || lowercasePathname === "/Resume")
-      setActiveItem("Resume");
+    if (lowercasePathname === "/projects") setActiveItem("Projects");
+    if (lowercasePathname === "/resume") setActiveItem("Resume");
   }, [pathname]);
 
   return (
@@ -49,13 +47,13 @@ const NavBar = () => {
           activeItem={activeItem}
           setActiveItem={setActiveItem}
           name="Projects"
-          route="/Projects"
+          route="/projects"
         />
         <NavItem
           activeItem={activeItem}
           setActiveItem={setActiveItem}
           name="Resume"
-          route="/Resume"
+          route="/resume"
         />
       </div>
     </div>

@@ -17,7 +17,7 @@ const index = () => {
           collaborating with cross-functional teams to deliver high-quality
           software solutions within specified timelines. May their passion drive
           them to stay abreast of emerging technologies and leverage them to
-          enhance product functionality.  
+          enhance product functionality.
         </h5>
         <div
           className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-500 shadow-custom-light dark:shadow-custom-dark"
@@ -66,15 +66,40 @@ export default index;
 //   }
 // }
 
+// export const getStaticProps = async (context: GetStaticPropsContext) => {
+//   const res = await fetch("http://localhost:3000/api/services");
+//   const data = await res.json();
+
+//   console.log("SERVER,services");
+
+//   return {
+//     props: {
+//       services: data.services,
+//     },
+//   };
+// };
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const res = await fetch("http://localhost:3000/api/services");
-  const data = await res.json();
+  try {
+    const res = await fetch("http://localhost:3000/api/services");
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.statusText}`);
+    }
+    const data = await res.json();
 
-  console.log("SERVER,services");
+    console.log("SERVER,services", data);
 
-  return {
-    props: {
-      services: data.services,
-    },
-  };
+    return {
+      props: {
+        services: data.services,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    // Return an empty object or default value to prevent build errors
+    return {
+      props: {
+        services: [],
+      },
+    };
+  }
 };

@@ -25,8 +25,8 @@ const Sidebar = () => {
       </p>
       <a
         className="flex justify-center px-2 py-1 my-3 bg-gray-200 rounded-full item-center"
-        href="/Resume.pdf"
-        download="Resume.pdf"
+        href="./Resume.pdf"
+        download="./Resume.pdf"
       >
         <GiTie className="w-6 h-6" />
         Download Resume
